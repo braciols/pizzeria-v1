@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pizzeria Fornace – Pizza napoletana a Torino</title>
+<meta name="description" content="Pizza napoletana cotta nel forno a legna. Scopri il menu, gli orari e prenota il tuo tavolo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap" aria-label="Navigazione principale">
+    <a class="logo" href="#top">Fornace</a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navList">Menu</button>
+    <ul id="navList">
+      <li><a href="#menu">Il menu</a></li>
+      <li><a href="#storia">La nostra storia</a></li>
+      <li><a href="#prenota">Orari e prenotazioni</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <div class="status" id="status" role="status" hidden><span class="dot"></span><span id="statusText">Siamo aperti adesso</span></div>
+        <h1>Pizza napoletana, cotta a legna.</h1>
+        <p>Impasto lievitato 48 ore, pomodoro San Marzano e mozzarella fior di latte. Ogni sera, dal forno al tuo tavolo.</p>
+        <div class="btns">
+          <a class="btn btn-primary" href="#prenota">Prenota un tavolo</a>
+          <a class="btn btn-ghost" href="#menu">Guarda il menu</a>
+        </div>
+      </div>
+      <svg class="pizza" viewBox="0 0 200 200" role="img" aria-label="Illustrazione di una pizza Margherita">
+        <circle cx="100" cy="100" r="92" fill="#d9944a"/>
+        <circle cx="100" cy="100" r="80" fill="#c8372d"/>
+        <circle cx="100" cy="100" r="76" fill="#f7efd9" opacity=".95"/>
+        <g fill="#c8372d"><circle cx="70" cy="75" r="14"/><circle cx="125" cy="70" r="12"/><circle cx="135" cy="125" r="15"/><circle cx="80" cy="132" r="13"/><circle cx="104" cy="102" r="10"/></g>
+        <g fill="#2f6b3f"><path d="M60 100c10-14 22-14 30-4-8 12-20 14-30 4z"/><path d="M112 140c10-12 22-12 28-2-8 12-20 12-28 2z"/><path d="M100 54c8-10 18-8 22 2-8 8-18 8-22-2z"/></g>
+      </svg>
+    </div>
+  </div>
+
+  <section id="menu">
+    <div class="wrap">
+      <h2>Il menu</h2>
+      <p class="lead">Poche pizze, fatte bene. Gli ingredienti arrivano da produttori campani.</p>
+      <div class="filters" role="group" aria-label="Filtra per categoria">
+        <button type="button" data-cat="tutto" aria-pressed="true">Tutto</button>
+        <button type="button" data-cat="classiche" aria-pressed="false">Classiche</button>
+        <button type="button" data-cat="speciali" aria-pressed="false">Speciali</button>
+        <button type="button" data-cat="fritti" aria-pressed="false">Fritti</button>
+        <button type="button" data-cat="dolci" aria-pressed="false">Dolci</button>
+      </div>
+      <ul class="items" id="items"></ul>
+    </div>
+  </section>
+
+  <section class="about" id="storia">
+    <div class="wrap">
+      <div>
+        <h2>Una famiglia, un forno.</h2>
+        <p>Dal 1987 impastiamo a mano ogni mattina. Il forno a legna di faggio raggiunge i 450 gradi e cuoce ogni pizza in circa 90 secondi, con il cornicione alto e morbido che ci ha reso un punto fermo del quartiere.</p>
+        <p>Sostituisci questo testo con la vostra vera storia: chi siete, come è nata la pizzeria e cosa vi rende diversi.</p>
+      </div>
+      <div class="facts">
+        <div class="fact"><strong>Impasto di 48 ore</strong><span>Lievitazione lenta, più digeribile e profumata.</span></div>
+        <div class="fact"><strong>Forno a legna di faggio</strong><span>Cottura a 450 °C in circa 90 secondi.</span></div>
+        <div class="fact"><strong>Ingredienti campani</strong><span>Pomodoro San Marzano, fior di latte e olio locale.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="prenota">
+    <div class="wrap">
+      <div>
+        <h2>Orari</h2>
+        <table id="hours" aria-label="Orari di apertura">
+          <tbody>
+            <tr data-d="1"><td>Lunedì</td><td>Chiuso</td></tr>
+            <tr data-d="2"><td>Martedì</td><td>18:30 – 23:30</td></tr>
+            <tr data-d="3"><td>Mercoledì</td><td>18:30 – 23:30</td></tr>
+            <tr data-d="4"><td>Giovedì</td><td>18:30 – 23:30</td></tr>
+            <tr data-d="5"><td>Venerdì</td><td>18:30 – 00:00</td></tr>
+            <tr data-d="6"><td>Sabato</td><td>12:00 – 15:00, 18:30 – 00:00</td></tr>
+            <tr data-d="0"><td>Domenica</td><td>12:00 – 15:00, 18:30 – 23:30</td></tr>
+          </tbody>
+        </table>
+        <p><strong>Indirizzo:</strong> Via Roma 1, 10121 Torino (TO)<br>
+        <strong>Telefono:</strong> <a href="tel:+390000000000">000 000 0000</a></p>
+        <a class="btn btn-primary" href="https://www.google.com/maps/search/?api=1&query=Via+Roma+1%2C+10121+Torino" target="_blank" rel="noopener">Apri su Google Maps</a>
+      </div>
+
+      <form id="bookForm" novalidate>
+        <h2 style="font-size:1.6rem">Prenota un tavolo</h2>
+        <label>Nome e cognome<input type="text" name="nome" autocomplete="name" required></label>
+        <div class="row">
+          <label>Data<input type="date" name="data" required></label>
+          <label>Orario
+            <select name="ora" required>
+              <option value="">Scegli</option>
+              <option>19:00</option><option>19:30</option><option>20:00</option>
+              <option>20:30</option><option>21:00</option><option>21:30</option><option>22:00</option>
+            </select>
+          </label>
+        </div>
+        <label>Numero di persone<input type="number" name="persone" min="1" max="12" value="2" required></label>
+        <button class="btn btn-primary" type="submit">Prenota su WhatsApp</button>
+        <div class="msg" id="formMsg" role="alert"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <a class="logo" href="#top">Fornace</a>
+    <p>Via Roma 1, Torino (TO) · P. IVA 00000000000</p>
+    <p>© <span id="year">2026</span> Pizzeria Fornace. Tutti i diritti riservati.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
